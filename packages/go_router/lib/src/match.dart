@@ -603,7 +603,7 @@ class RouteMatchList with Diagnosticable {
     List<RouteMatchBase> otherMatches,
     ImperativeRouteMatch match,
   ) {
-    final List<RouteMatchBase> newMatches = currentMatches.toList();
+    final List<RouteMatchBase> newMatches = currentMatches.cast<RouteMatchBase>().toList();
     if (otherMatches.last is ShellRouteMatch &&
         newMatches.isNotEmpty &&
         otherMatches.last.route == newMatches.last.route) {
